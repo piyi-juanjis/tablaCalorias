@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <p class="h1">Listado de clientes</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <div class="row align-items-start">
+            <div class="col">
+                <table class="table table-striped table-hover table-bordered">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Sexo</th>
+                            <th scope="col">Edad</th>
+                            <th scope="col">Altura</th>
+                            <th scope="col">Peso</th>
+                            <th scope="col">Actividad</th>
+                            <th scope="col">GET(kCal)</th>
+                            <th scope="col">GER(kCal)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td><span class="badge text-bg-primary">hombre</span></td>
+                            <td>33</td>
+                            <td>180</td>
+                            <td>90</td>
+                            <td><span class="badge text-bg-secondary">sedentaria</span></td>
+                            <td>200</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td><span class="badge text-bg-primary">hombre</span></td>
+                            <td>29</td>
+                            <td>180</td>
+                            <td>90</td>
+                            <td><span class="badge text-bg-secondary">media</span></td>
+                            <td>200</td>
+                            <td>200</td>
+                        </tr>
+                        <tr>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td><span class="badge text-bg-primary">hombre</span></td>
+                            <td>28</td>
+                            <td>180</td>
+                            <td>90</td>
+                            <td><span class="badge text-bg-secondary">intensa</span></td>
+                            <td>200</td>
+                            <td>200</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="container text-center">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <a class="btn btn-primary" id="myInput" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" href="#" role="button">Nuevo cliente</a>
+                            <a class="btn btn-secondary" id="myInput" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" href="#" role="button">Cargar clientes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h1 class="modal-title fs-5 text-light" id="exampleModalLabel">Nuevo cliente</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-start">
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input value="Escriba su nombre" type="text" class="form-control"
+                                    aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Apellidos</label>
+                                <input value="Escriba su apellido" type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label">Sexo</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="1">Hombre</option>
+                                        <option value="2">Mujer</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">Nivel de actividad</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option value="1">intensa</option>
+                                        <option value="2">media</option>
+                                        <option value="2">sedentaria</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label"></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <label class="form-label">Edad</label>
+                                    <input type="number" class="form-control" aria-label="Edad">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">Peso(kg)</label>
+                                    <input type="number" class="form-control" aria-label="Peso">
+                                </div>
+                                <div class="col">
+                                    <label class="form-label">Altura(cm)</label>
+                                    <input type="number" class="form-control" aria-label="Altura">
+                                    </select>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label class="form-label"></label>
+                                    </div>
+                                </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary">Guardar cliente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+
+
+
+</body>
+
+</html>
