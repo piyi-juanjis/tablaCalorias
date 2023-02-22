@@ -25,7 +25,7 @@
     <div class="container text-center">
         <div class="row align-items-start">
             <div class="col">
-                <table class="table table-striped table-hover table-bordered">
+                <table id="tablaClientes" class="table table-striped table-hover table-bordered">
                     <thead>
                         <tr class="bg-primary text-white">
                             <th scope="col">Nombre</th>
@@ -80,8 +80,7 @@
                         <div class="col">
                             <a class="btn btn-primary" id="myInput" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal" href="#" role="button">Nuevo cliente</a>
-                            <a class="btn btn-secondary" id="myInput" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" href="#" role="button">Cargar clientes</a>
+                            <a class="btn btn-secondary" id="inputCarga"role="button">Cargar clientes</a>
                         </div>
                     </div>
                 </div>
@@ -100,12 +99,11 @@
                         <form>
                             <div class="mb-3">
                                 <label class="form-label">Nombre</label>
-                                <input value="Escriba su nombre" type="text" class="form-control"
-                                    aria-describedby="emailHelp">
+                                <input value="Escriba su nombre" type="text" class="form-control" required>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Apellidos</label>
-                                <input value="Escriba su apellido" type="text" class="form-control">
+                                <input value="Escriba su apellido" type="text" class="form-control" required>
                             </div>
                             <div class="mb-3">
 
@@ -113,14 +111,14 @@
                             <div class="row">
                                 <div class="col">
                                     <label class="form-label">Sexo</label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" required>
                                         <option value="1">Hombre</option>
                                         <option value="2">Mujer</option>
                                     </select>
                                 </div>
                                 <div class="col">
                                     <label class="form-label">Nivel de actividad</label>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" aria-label="Default select example" required>
                                         <option value="1">intensa</option>
                                         <option value="2">media</option>
                                         <option value="2">sedentaria</option>
@@ -135,15 +133,15 @@
                             <div class="row">
                                 <div class="col">
                                     <label class="form-label">Edad</label>
-                                    <input type="number" class="form-control" aria-label="Edad">
+                                    <input type="number" min="15" max="80" class="form-control" aria-label="Edad" required>
                                 </div>
                                 <div class="col">
                                     <label class="form-label">Peso(kg)</label>
-                                    <input type="number" class="form-control" aria-label="Peso">
+                                    <input type="number" min="40" max="200" class="form-control" aria-label="Peso" required>
                                 </div>
                                 <div class="col">
                                     <label class="form-label">Altura(cm)</label>
-                                    <input type="number" class="form-control" aria-label="Altura">
+                                    <input type="number" min="120" max="250" class="form-control" aria-label="Altura" required>
                                     </select>
                                 </div>
                                 <div class="row">
